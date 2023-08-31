@@ -1,13 +1,14 @@
 package com.example.application_week2_ex1;
 
+import androidx.appcompat.app.AppCompatActivity;
+
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 
-import androidx.appcompat.app.AppCompatActivity;
+public class Exercise03 extends AppCompatActivity {
 
-public class Exercise3 extends AppCompatActivity {
     private TextView display;
     private Button click;
     private boolean isTextOne = true; // Initial state
