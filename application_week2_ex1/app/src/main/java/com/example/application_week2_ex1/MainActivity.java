@@ -7,9 +7,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 
-import com.example.application_week2_ex1.R;
-
-public class MainActivity extends AppCompatActivity {
+public class Exercise03 extends AppCompatActivity {
 
     private TextView display;
     private Button click;
@@ -20,7 +18,7 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        display = findViewById(R.id.textView2);
+        display = findViewById(R.id.textView);
         click = findViewById(R.id.button);
 
         click.setOnClickListener(new View.OnClickListener() {
