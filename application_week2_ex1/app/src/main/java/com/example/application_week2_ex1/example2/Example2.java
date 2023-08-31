@@ -1,4 +1,4 @@
-package com.example.application_week2_ex1;
+package com.example.application_week2_ex1.example2;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -8,7 +8,9 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 
-public class Exercise04 extends AppCompatActivity {
+import com.example.application_week2_ex1.R;
+
+public class Example2 extends AppCompatActivity {
 
     Button displaybtn;
     EditText input;

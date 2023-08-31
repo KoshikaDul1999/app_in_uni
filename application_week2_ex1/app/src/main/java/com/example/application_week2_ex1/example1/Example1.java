@@ -1,4 +1,4 @@
-package com.example.application_week2_ex1;
+package com.example.application_week2_ex1.example1;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -7,7 +7,9 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 
-public class Exercise03 extends AppCompatActivity {
+import com.example.application_week2_ex1.R;
+
+public class Example1 extends AppCompatActivity {
 
     private TextView display;
     private Button click;

@@ -1,4 +1,4 @@
-package com.example.application_week2_ex1;
+package com.example.application_week2_ex1.example4;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -6,7 +6,9 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.widget.TextView;
 
-public class SecondActivity extends AppCompatActivity {
+import com.example.application_week2_ex1.R;
+
+public class Example4SecondActivity extends AppCompatActivity {
 
     TextView name;
     TextView city;
