@@ -22,24 +22,39 @@ public class SecondActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 String colorCode = colorCodeEditText.getText().toString();
-                String selectedCylinder = matchColorCode(colorCode);
+                String cylinderInfo = getCylinderInfo(colorCode);
 
                 Intent resultIntent = new Intent();
-                resultIntent.putExtra("selectedCylinder", selectedCylinder);
+                resultIntent.putExtra("CYLINDERINFO", cylinderInfo);
                 setResult(RESULT_OK, resultIntent);
                 finish();
             }
         });
     }
 
-    private String matchColorCode(String colorCode) {
-        switch (colorCode.toLowerCase()) {
+    private String getCylinderInfo(String colorCode) {
+        String fcylinderInfo;
+
+        switch (colorCode) {
             case "red":
-                return "Hydrogen (Red)";
-            // Add more cases for other color codes and cylinders
+                fcylinderInfo = "Red Cylinder";
+                break;
+            case "black":
+                fcylinderInfo = "Black Cylinder";
+                break;
+            case "yellow":
+                fcylinderInfo = "Yellow Cylinder";
+                break;
+            case "blue":
+                fcylinderInfo = "Blue Cylinder";
+                break;
+            case "white":
+                fcylinderInfo = "White Cylinder";
+                break;
             default:
                 return "Unknown Cylinder";
         }
+        return fcylinderInfo;
     }
 
 }
