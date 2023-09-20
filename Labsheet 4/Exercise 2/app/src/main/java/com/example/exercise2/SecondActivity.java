@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -36,13 +37,23 @@ public class SecondActivity extends AppCompatActivity {
         });
     }
 
-    private double calculateTotal(){
-        double product1Price = Double.parseDouble(product1EditText.getText().toString());
-        double product2Price = Double.parseDouble(product2EditText.getText().toString());
-        double product3Price = Double.parseDouble(product3EditText.getText().toString());
-        double product4Price = Double.parseDouble(product4EditText.getText().toString());
-        double product5Price = Double.parseDouble(product5EditText.getText().toString());
+    private double calculateTotal() {
+        try {
+            double product1Price = Double.parseDouble(product1EditText.getText().toString());
+            double product2Price = Double.parseDouble(product2EditText.getText().toString());
+            double product3Price = Double.parseDouble(product3EditText.getText().toString());
+            double product4Price = Double.parseDouble(product4EditText.getText().toString());
+            double product5Price = Double.parseDouble(product5EditText.getText().toString());
 
-        return product1Price + product2Price + product3Price + product4Price + product5Price;
+            Log.d("Debug", "product1Price: " + product1Price);
+            Log.d("Debug", "product2Price: " + product2Price);
+            Log.d("Debug", "product3Price: " + product3Price);
+            Log.d("Debug", "product4Price: " + product4Price);
+            Log.d("Debug", "product5Price: " + product5Price);
+
+            return product1Price + product2Price + product3Price + product4Price + product5Price;
+        } catch (NumberFormatException e) {
+            return 0.0;
+        }
     }
 }
