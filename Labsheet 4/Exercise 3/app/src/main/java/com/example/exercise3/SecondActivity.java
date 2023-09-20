@@ -52,7 +52,7 @@ public class SecondActivity extends AppCompatActivity {
                 fcylinderInfo = "White Cylinder";
                 break;
             default:
-                return "Unknown Cylinder";
+                fcylinderInfo = "Not Found";
         }
         return fcylinderInfo;
     }
