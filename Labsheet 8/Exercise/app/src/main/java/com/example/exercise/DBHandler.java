@@ -1,5 +1,6 @@
 package com.example.exercise;
 
+import android.content.ContentValues;
 import android.content.Context;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
@@ -24,5 +25,16 @@ public class DBHandler extends SQLiteOpenHelper {
         String sql = "DROP TABLE IF EXISTS student_details;";
         sqLiteDatabase.execSQL(sql);
         onCreate(sqLiteDatabase);
+    }
+
+    public void addStudent(Student student) {
+        SQLiteDatabase sqLiteDatabase = getWritableDatabase();
+        ContentValues contentValues = new ContentValues();
+        contentValues.put("name", student.getName());
+        contentValues.put("age", student.getAge());
+        contentValues.put("address", student.getAddress());
+        contentValues.put("dep", student.getDep());
+        sqLiteDatabase.insert("student", null, contentValues);
+        sqLiteDatabase.close();
     }
 }
