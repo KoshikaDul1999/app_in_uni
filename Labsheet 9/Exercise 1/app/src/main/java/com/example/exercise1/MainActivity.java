@@ -36,9 +36,9 @@ public class MainActivity extends AppCompatActivity {
                 String mail = Email.getText().toString();
                 String contact = Mobile.getText().toString();
 
-                Toast.makeText(this, "Data entered successfully",Toast.LENGTH_LONG).show();
+                Toast.makeText(MainActivity.this, "Data entered successfully",Toast.LENGTH_LONG).show();
 
-                Intent intent = new Intent(this, SecondActivity.class);
+                Intent intent = new Intent(MainActivity.this, SecondActivity.class);
                 intent.putExtra("name", name);
                 intent.putExtra("age", age);
                 intent.putExtra("gender", gender);
