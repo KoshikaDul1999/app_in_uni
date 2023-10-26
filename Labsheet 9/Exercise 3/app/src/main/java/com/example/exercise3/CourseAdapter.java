@@ -35,6 +35,7 @@ public class CourseAdapter extends ArrayAdapter<Course> {
         if (course != null) {
             TextView courseCodeTextView = v.findViewById(R.id.courseCodeTextView);
 
+
             if (courseCodeTextView != null) {
                 courseCodeTextView.setText(course.getCourseCode());
             }
