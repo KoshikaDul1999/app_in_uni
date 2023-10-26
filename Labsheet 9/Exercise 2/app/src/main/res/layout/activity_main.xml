@@ -1,18 +1,137 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    tools:context=".MainActivity"
+    android:padding="16dp">
 
     <TextView
-        android:layout_width="wrap_content"
+        android:id="@+id/display"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:layout_gravity="end"
+        android:textSize="24sp"
+        android:text="0"
+        android:layout_weight="1"
+        android:gravity="right"
+        android:maxLines="1"
+        android:ellipsize="end" />
+    
+    <GridLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:columnCount="4"
+        android:rowCount="5"
+        android:layout_weight="4" >
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+        <Button
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="7"
+            android:layout_columnWeight="1"
+            android:layout_gravity="fill"
+            android:onClick="onNumberClick"
+            />
+        <Button
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="8"
+            android:layout_columnWeight="1"
+            android:layout_gravity="fill"
+            android:onClick="onNumberClick" />
+        <Button
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="9"
+            android:layout_columnWeight="1"
+            android:layout_gravity="fill"
+            android:onClick="onNumberClick" />
+        <Button
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="+"
+            android:layout_columnWeight="1"
+            android:layout_gravity="fill"
+            android:onClick="onOperatorClick" />
+
+
+        <Button
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="4"
+            android:layout_columnWeight="1"
+            android:layout_gravity="fill"
+            android:onClick="onNumberClick" />
+        <Button
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="5"
+            android:layout_columnWeight="1"
+            android:layout_gravity="fill"
+            android:onClick="onNumberClick" />
+        <Button
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="6"
+            android:layout_columnWeight="1"
+            android:layout_gravity="fill"
+            android:onClick="onNumberClick" />
+        <Button
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="-"
+            android:layout_columnWeight="1"
+            android:layout_gravity="fill"
+            android:onClick="onOperatorClick" />
+
+
+        <Button
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="1"
+            android:layout_columnWeight="1"
+            android:layout_gravity="fill"
+            android:onClick="onNumberClick" />
+        <Button
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="2"
+            android:layout_columnWeight="1"
+            android:layout_gravity="fill"
+            android:onClick="onNumberClick" />
+        <Button
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="3"
+            android:layout_columnWeight="1"
+            android:layout_gravity="fill"
+            android:onClick="onNumberClick" />
+        <Button
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="*"
+            android:layout_columnWeight="1"
+            android:layout_gravity="fill"
+            android:onClick="onOperatorClick" />
+
+
+        <Button
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="0"
+            android:layout_columnWeight="1"
+            android:layout_gravity="fill"
+            android:onClick="onNumberClick" />
+        <Button
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="="
+            android:layout_columnWeight="1"
+            android:layout_gravity="fill"
+            android:onClick="onEqualsClick" />
+
+    </GridLayout>
+
+</LinearLayout>
